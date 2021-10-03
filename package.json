@@ -1,0 +1,31 @@
+{
+  "name": "6",
+  "version": "0.0.1",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "postcss ./css/*.css -o ./css/style.css -w",
+    "build:css": "postcss ./css/main.css -o ./css/style.css",
+    "production:css": "NODE_ENV=production postcss ./css/main.css -o ./css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "parcel-bundler": "^1.9.4",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.15"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "postcss-plugins": "^1.13.1"
+  },
+  "description": ""
+}

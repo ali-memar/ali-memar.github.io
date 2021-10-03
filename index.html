@@ -1,0 +1,370 @@
+<!doctype html5>
+<html class="no-js" lang="fa" aria-label="grammarly-integration">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ali Memar</title>
+  <meta name="description" content="Ali Memar - Front-End Developer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Ali Memar">
+  <!-- <meta property="og:type" content=""> -->
+  <meta property="og:url" content="alimemar.ir">
+  <!-- <meta property="og:image" content=""> -->
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./tailwind.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script> <!-- alpine js  -->
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="bg-[#1e1e28]">
+  <div x-data="{toggleMenu: false}" class="root !max-w-[1440px] mx-auto relative">
+    <div class="cover-bg-toggle-menu absolute w-full h-full bg-[#1e1e28e0] z-20 transition-0.5"
+      x-bind:class="{ 'opacity-0 z-0': !toggleMenu }" x-on:click="toggleMenu = false"></div>
+    <!-- side bar  -->
+    <section id="side-menu" class="fixed w-72 z-20 h-screen transition-0.5 -left-72 lg:left-0"
+      :class="{ '!left-0': toggleMenu }">
+      <div class="wrapper-side-menu bg-[#20202a] h-full flex flex-col overflow-y-scroll myScroll relative">
+        <div class="header-profile text-center p-7 bg-[#24242f] text-sm fixed h-52 w-72 opacity-[98%]">
+          <div class="wrapper-avatar relative">
+            <img class="rounded-full mx-auto w-24"
+              src="https://bslthemes.site/arter/wp-content/uploads/2020/09/face-1-small.jpg" alt="avatar">
+            <div class="ping absolute right-20 bottom-0">
+              <span class="flex h-3 w-3 relative">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6e6e76] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-brand"></span>
+              </span>
+            </div>
+          </div>
+          <h2 class="font-bold text-white my-2.5">Ali Memar</h2>
+          <p class="text-[#8c8c8c]">Front-end Developer</p>
+        </div>
+        <div class="body-profile p-7 pt-0 mt-52">
+          <div class="wrapper-specifications py-4 font-semibold text-sm text-white border-b border-[#404047] mb-3">
+            <div class="item-specification mb-2 flex justify-between">
+              <p class="">Country:</p>
+              <p class="text-[#8c8c8c]">Iran</p>
+            </div>
+            <div class="item-specification mb-2 flex justify-between">
+              <p class="">City:</p>
+              <p class="text-[#8c8c8c]">Qom</p>
+            </div>
+            <div class="item-specification mb-2 flex justify-between">
+              <p class="">Age:</p>
+              <p class="text-[#8c8c8c]">20</p>
+            </div>
+            <div class="item-specification mb-2 flex justify-between">
+              <p class="">Email:</p>
+              <p class="text-[#8c8c8c]">alimemar80@gmail.com</p>
+            </div>
+          </div>
+          <div class="wrapper-program-language py-4 text-white border-b border-[#404047] mb-3">
+            <h3 class="font-bold text-sm">Coding</h3>
+            <div class="items-coding pt-5 pb-4 text-sm font-semibold">
+              <div class="item-coding justify-center items-center mb-4">
+                <div class="value-item-coding flex justify-between mb-2">
+                  <span>html</span><span class="text-[#cacaca]">90%</span>
+                </div>
+                <div class="bg-[#191923] rounded-full w-full block">
+                  <div class="w-[90%]">
+                    <div class="progress-value rounded-full bg-brand h-1 overflow-hidden"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-coding justify-center items-center mb-4">
+                <div class="value-item-coding flex justify-between mb-2">
+                  <span>css</span><span class="text-[#cacaca]">95%</span>
+                </div>
+                <div class="bg-[#191923] rounded-full w-full block">
+                  <div class="w-[95%]">
+                    <div class="progress-value rounded-full bg-brand h-1 overflow-hidden"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-coding justify-center items-center mb-4">
+                <div class="value-item-coding flex justify-between mb-2">
+                  <span>js</span><span class="text-[#cacaca]">70%</span>
+                </div>
+                <div class="bg-[#191923] rounded-full w-full block">
+                  <div class="w-[70%]">
+                    <div class="progress-value rounded-full bg-brand h-1 overflow-hidden"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-coding justify-center items-center mb-4">
+                <div class="value-item-coding flex justify-between mb-2">
+                  <span>c++</span><span class="text-[#cacaca]">75%</span>
+                </div>
+                <div class="bg-[#191923] rounded-full w-full block">
+                  <div class="w-[75%]">
+                    <div class="progress-value rounded-full bg-brand h-1 overflow-hidden"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-knowledge py-4 text-white mb-4">
+            <h3 class="font-bold text-sm">Knowledge</h3>
+            <div class="item-knowledge pt-5 text-sm mb-1">
+              <span class="text-[#8c8c8c]">
+                <span class="text-brand">
+                  <i class="fa fa-check mr-1 text-[10px]" aria-hidden="true"></i>
+                </span>Bootstrap, TailwindCss, Sass
+              </span>
+            </div>
+            <div class="item-knowledge text-sm mb-1">
+              <span class="text-[#8c8c8c]">
+                <span class="text-brand">
+                  <i class="fa fa-check mr-1 text-[10px]" aria-hidden="true"></i>
+                </span>jQuery, ReactJs, NextJS
+              </span>
+            </div>
+            <div class="item-knowledge text-sm mb-1">
+              <span class="text-[#8c8c8c]">
+                <span class="text-brand">
+                  <i class="fa fa-check mr-1 text-[10px]" aria-hidden="true"></i>
+                </span>VueJs, NuxtJs, AngularJs
+              </span>
+            </div>
+            <div class="item-knowledge text-sm mb-1">
+              <span class="text-[#8c8c8c]">
+                <span class="text-brand">
+                  <i class="fa fa-check mr-1 text-[10px]" aria-hidden="true"></i>
+                </span>Git
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-profile bg-[#24242f] fixed w-72 bottom-0 text-white">
+          <div class="social flex justify-center h-12 items-center gap-6">
+            <div>
+              <a href="https://www.linkedin.com/in/alimemar/" target="blank" title="linkedin"><i class="fa fa-linkedin"
+                  aria-hidden="true"></i></a>
+            </div>
+            <div>
+              <a href="https://github.com/ali-memar" target="blank" title="github"><i class="fa fa-github"
+                  aria-hidden="true"></i></a>
+            </div>
+            <div>
+              <a href="#" target="blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- content -->
+    <section id="main">
+      <div class="wrapper-main relative transition-0.5 lg:ml-72" x-bind:class="{ '!ml-0': toggleMenu }">
+        <div class="wrapper-toggle-btn fixed top-9 -left-2.5 z-20 transition-0.5 lg:hidden"
+          x-bind:class="{ '!left-[276px]': toggleMenu }">
+          <button x-on:click="toggleMenu = !toggleMenu" type="menu"
+            class="toggle-btn bg-[#24242f] text-[#8c8c8c] transform -rotate-90 outline-none rounded-b-full px-4 py-1 font-bold text-2xl shadow">
+            <img class=" transition-0.5 !animate-bounce" x-bind:class="{ 'rotate-180': toggleMenu }" src="img/arrow-menu.png" alt="arrow">
+          </button>
+        </div>
+        <!-- header  -->
+        <div class="wrapper-header-main relative overflow-hidden h-96 sm:h-[440px]">
+          <img class="" src="https://bslthemes.site/arter/wp-content/uploads/2020/09/bg.jpg" alt="background">
+          <div class="wrapper-content-header px-8 absolute top-0 w-full h-full flex overflow-hidden">
+            <div class="img-content-header w-full h-80 mx-auto relative overflow-hidden mt-14">
+              <img src="https://bslthemes.site/arter/wp-content/uploads/2020/09/bg.jpg" alt="background">
+
+              <div
+                class="text-white absolute top-0 flex flex-col justify-evenly w-full h-80 py-14 px-4 sm:px-14 text-center lg:text-left transition-0.5">
+                <h1 class="font-extrabold text-xl sm:text-4xl mb-4">Front-End working,<br> the pleasure of creation</h1>
+                <p class="font-mono text-sm mb-7">
+                  <<span class="text-brand">code</span>>
+                    <span class="typer" id="some-id"
+                      data-words="Interested in Front-End.,Familiar with UI & UX and web concepts.,In search of opportunity and experience.,Developing..."
+                      data-delay="100" data-colors="#fff">
+                    </span>
+                    <span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|"
+                      data-owner="some-id"></span>
+                    <<span>/</span><span class="text-brand">code</span>>
+                </p>
+                <a class="font-mono text-sm bg-brand py-3 text-black font-extrabold tracking-widest w-40 block text-center mx-auto lg:ml-0"
+                  href="#works">Lets Go...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- portfolio  -->
+        <section id="works" class="px-8 text-white mt-6 lg:mt-0 overflow-hidden">
+          <h2 class="mb-6 font-bold text-lg">Portfolio</h2>
+          <dev class="wrapper-works grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+            <!-- 1  -->
+            <div class="item-work relative">
+              <a class="group" href="../1/index.html" target="blank">
+                <div
+                  class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
+                  <div
+                    class="wrapper-description-work relative flex flex-col text-center h-full justify-between border-t border border-dashed border-gray-400 text-brand">
+                    <p
+                      class="title-work text-2xl text-whie h-full w-full group-hover:translate-y-[70%] ease-linear transition-transform">
+                      Hot Coffee
+                    </p>
+                    <hr
+                      class="mx-auto w-11 scale-0 group-hover:scale-100 ease-linear transition-transform bg-brand border-0">
+                    <p
+                      class="description-work text-gray-300 font-light text-sm h-full w-full group-hover:translate-y-[-80%] ease-linear transition-transform self-end flex justify-center items-end">
+                      HTML, CSS, Tailwind
+                    </p>
+                  </div>
+                </div>
+                <div class="wrapper-img-work h-full w-full overflow-hidden">
+                  <img
+                    class="img-work mx-aut group-hover:scale-125 ease-linear transition-transform h-full w-full object-cover object-center grayscale"
+                    src="img/hot-coffee.png" alt="image cover-work">
+                </div>
+              </a>
+            </div>
+            <!-- 2  -->
+            <div class="item-work relative">
+              <a class="group" href="../2/index.html" target="blank">
+                <div
+                  class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
+                  <div
+                    class="wrapper-description-work relative flex flex-col text-center h-full justify-between border-t border border-dashed border-gray-400 text-brand">
+                    <p
+                      class="title-work text-2xl text-whie h-full w-full group-hover:translate-y-[70%] ease-linear transition-transform">
+                      Travel Blog
+                    </p>
+                    <hr
+                      class="mx-auto w-11 scale-0 group-hover:scale-100 ease-linear transition-transform bg-brand border-0">
+                    <p
+                      class="description-work text-gray-300 font-light text-sm h-full w-full group-hover:translate-y-[-80%] ease-linear transition-transform self-end flex justify-center items-end">
+                      HTML, CSS, JS, Tailwind
+                    </p>
+                  </div>
+                </div>
+                <div class="wrapper-img-work h-full w-full overflow-hidden">
+                  <img
+                    class="img-work mx-aut group-hover:scale-125 ease-linear transition-transform h-full w-full object-cover object-center grayscale"
+                    src="img/TravelBlog.png" alt="image cover-work">
+                </div>
+              </a>
+            </div>
+            <!-- 3  -->
+            <div class="item-work relative">
+              <a class="group" href="../3/index.html" target="blank">
+                <div
+                  class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
+                  <div
+                    class="wrapper-description-work relative flex flex-col text-center h-full justify-between border-t border border-dashed border-gray-400 text-brand">
+                    <p
+                      class="title-work text-2xl text-whie h-full w-full group-hover:translate-y-[70%] ease-linear transition-transform">
+                      QWERy
+                    </p>
+                    <hr
+                      class="mx-auto w-11 scale-0 group-hover:scale-100 ease-linear transition-transform bg-brand border-0">
+                    <p
+                      class="description-work text-gray-300 font-light text-sm h-full w-full group-hover:translate-y-[-80%] ease-linear transition-transform self-end flex justify-center items-end">
+                      HTML, CSS, JS, Tailwind
+                    </p>
+                  </div>
+                </div>
+                <div class="wrapper-img-work h-full w-full overflow-hidden">
+                  <img
+                    class="img-work mx-aut group-hover:scale-125 ease-linear transition-transform h-full w-full object-cover object-center grayscale"
+                    src="img/mntn.png" alt="image cover-work">
+                </div>
+              </a>
+            </div>
+            <!-- 4  -->
+            <div class="item-work relative">
+              <a class="group" href="../4/index.html" target="blank">
+                <div
+                  class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
+                  <div
+                    class="wrapper-description-work relative flex flex-col text-center h-full justify-between border-t border border-dashed border-gray-400 text-brand">
+                    <p
+                      class="title-work text-2xl text-whie h-full w-full group-hover:translate-y-[70%] ease-linear transition-transform">
+                      MNTN
+                    </p>
+                    <hr
+                      class="mx-auto w-11 scale-0 group-hover:scale-100 ease-linear transition-transform bg-brand border-0">
+                    <p
+                      class="description-work text-gray-300 font-light text-sm h-full w-full group-hover:translate-y-[-80%] ease-linear transition-transform self-end flex justify-center items-end">
+                      HTML, CSS, Tailwind
+                    </p>
+                  </div>
+                </div>
+                <div class="wrapper-img-work h-full w-full overflow-hidden">
+                  <img
+                    class="img-work mx-aut group-hover:scale-125 ease-linear transition-transform h-full w-full object-cover object-center grayscale"
+                    src="https://s3-alpha-sig.figma.com/thumbnails/FRp0Zp0neMbRVjonmnfsNp/default?Expires=1633305600&Signature=FJC1BykYoZVIfBK4of0PD2zavRhco9LoLiEBr8UuGieHChPqeIEcAxFhupJGt~XkDimEjQL98xIkLxM1ZDR6iqxsYAtd-AvDsC~1nEkN3Ost2Jl8H0vZ0dljHuuN4mGVp~A0NA~fZsxsnXMN4Fa4T1-1mYSan2mCYHDH-dDfTcWJqx2XeSgp17mLh4745sQgayArUL84VkGYWGj7IhXFW-OR2sxRhh1fBF6wrpF8rNDzShUPyrMecVbcZP1tGUXCjDLyZSf-qe3D6KrtuIdvB1M-oIZkZV4jxyue8PDFvNj5bxwmkBY7kDYLmXusHNTsrWRrA8XAXu62XdBZ3yUq7Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                    alt="image cover-work">
+                </div>
+              </a>
+            </div>
+            <!-- 5  -->
+            <div class="item-work relative">
+              <a class="group" href="../5/index.html" target="blank">
+                <div
+                  class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
+                  <div
+                    class="wrapper-description-work relative flex flex-col text-center h-full justify-between border-t border border-dashed border-gray-400 text-brand">
+                    <p
+                      class="title-work text-2xl text-whie h-full w-full group-hover:translate-y-[70%] ease-linear transition-transform">
+                      Photo Grapher
+                    </p>
+                    <hr
+                      class="mx-auto w-11 scale-0 group-hover:scale-100 ease-linear transition-transform bg-brand border-0">
+                    <p
+                      class="description-work text-gray-300 font-light text-sm h-full w-full group-hover:translate-y-[-80%] ease-linear transition-transform self-end flex justify-center items-end">
+                      HTML, CSS, JS, Tailwind
+                    </p>
+                  </div>
+                </div>
+                <div class="wrapper-img-work h-full w-full overflow-hidden">
+                  <img
+                    class="img-work mx-aut group-hover:scale-125 ease-linear transition-transform h-full w-full object-cover object-center grayscale"
+                    src="img/photograph.png" alt="image cover-work">
+                </div>
+              </a>
+            </div>
+          </dev>
+        </section>
+
+        <footer class="px-8 mt-8 mb-">
+          <div class="wrapper-footer bg-[#24242f] text-[#8c8c8e] h-12 text-sm px-7 py-4 text-center">
+            <div class="copy-right">
+              <p>©2021 All Right Reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </div>
+  </section>
+
+
+  <script defer async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script><!-- typer js  -->
+  <script defer src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true">
+  <div id="chrome" aria-label="grammarly-integration" tabindex="-1"
+    data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div>
+</grammarly-desktop-integration>
+
+</html>
