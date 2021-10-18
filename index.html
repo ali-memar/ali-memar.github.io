@@ -30,11 +30,11 @@
     <div class="cover-bg-toggle-menu absolute w-full h-full bg-[#1e1e28e0] z-20 transition-0.5"
       x-bind:class="{ 'opacity-0 z-0': !toggleMenu }" x-on:click="toggleMenu = false"></div>
     <!-- side bar  -->
-    <section id="side-menu" class="fixed w-72 z-20 h-screen transition-0.5 -left-72 lg:left-0"
+    <section id="side-menu" class="absolute w-72 z-20 h-screen transition-0.5 -left-72 lg:left-0"
       :class="{ '!left-0': toggleMenu }">
-      <div class="wrapper-side-menu bg-[#20202a] h-full flex flex-col overflow-y-scroll scroll-slider !p-0 relative">
-        <div class="header-profile text-center p-7 bg-[#24242f] text-sm fixed h-52 w-72 opacity-[98%]">
-          <div class="wrapper-avatar relative">
+      <div class="wrapper-side-menu bg-[#20202a] h-full flex flex-col overflow-y-scroll scroll-slider !p-0 fixed w-72">
+        <div class="header-profile text-center p-7 pt-[74px] bg-[#24242f] text-sm fixed h-52 w-72 opacity-[98%]">
+          <!-- <div class="wrapper-avatar relative">
             <img class="rounded-full mx-auto w-24"
               src="https://bslthemes.site/arter/wp-content/uploads/2020/09/face-1-small.jpg" alt="avatar">
             <div class="ping absolute right-20 bottom-0">
@@ -44,7 +44,7 @@
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-brand"></span>
               </span>
             </div>
-          </div>
+          </div> -->
           <h2 class="font-bold text-white my-2.5">Ali Memar</h2>
           <p class="text-[#8c8c8c]">Front-end Developer</p>
         </div>
@@ -102,10 +102,10 @@
               </div>
               <div class="item-coding justify-center items-center mb-4">
                 <div class="value-item-coding flex justify-between mb-2">
-                  <span>c++</span><span class="text-[#cacaca]">75%</span>
+                  <span>c++</span><span class="text-[#cacaca]">65%</span>
                 </div>
                 <div class="bg-[#191923] rounded-full w-full block">
-                  <div class="w-[75%]">
+                  <div class="w-[65%]">
                     <div class="progress-value rounded-full bg-brand h-1 overflow-hidden"></div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@
 
     <!-- content -->
     <section id="main">
-      <div class="wrapper-main relative transition-0.5 lg:ml-72" x-bind:class="{ '!ml-0': toggleMenu }">
+      <div class="wrapper-main flex flex-col min-h-full relative transition-0.5 lg:ml-72" x-bind:class="{ '!ml-0': toggleMenu }">
         <div class="wrapper-toggle-btn fixed top-9 -left-2.5 z-20 transition-0.5 lg:hidden"
           x-bind:class="{ '!left-[276px]': toggleMenu }">
           <button x-on:click="toggleMenu = !toggleMenu" type="menu"
@@ -182,7 +182,7 @@
 
               <div
                 class="text-white absolute top-0 flex flex-col justify-evenly w-full h-80 py-14 px-4 sm:px-14 text-center lg:text-left transition-0.5">
-                <h1 class="font-extrabold text-xl sm:text-4xl mb-4">Front-End working,<br> the pleasure of creation</h1>
+                <h1 class="font-extrabold text-xl sm:text-4xl mb-4">Front-End coding,<br> the pleasure of creation</h1>
                 <p class="font-mono text-sm mb-7">
                   <<span class="text-brand">code</span>>
                     <span class="typer" id="some-id"
@@ -202,12 +202,12 @@
         </div>
 
         <!-- portfolio  -->
-        <section id="works" class="px-8 text-white mt-6 lg:mt-0 overflow-hidden">
+        <section id="works" class="px-8 text-white mt-6 mb-8 lg:mt-0 overflow-hidden">
           <h2 class="mb-6 font-bold text-lg">Portfolio</h2>
           <dev class="wrapper-works grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
             <!-- qombroker  -->
             <div class="item-work relative">
-              <a class="group" href="qombroker.ir" target="blank" title="qombroker" aria-label="qombroker">
+              <a class="group" href="https://qombroker.ir/" target="blank" title="qombroker" aria-label="qombroker">
                 <div
                   class="bg-[#191923] bg-opacity-95 opacity-0 hover:opacity-100 transition absolute top-0 left-0 w-full h-full z-10 p-4">
                   <div
@@ -390,7 +390,7 @@
           </dev>
         </section>
 
-        <footer class="px-8 mt-8 mb-">
+        <footer class="px-8 mt-auto">
           <div class="wrapper-footer bg-[#24242f] text-[#8c8c8e] h-12 text-sm px-7 py-4 text-center">
             <div class="copy-right">
               <p>©2021 All Right Reserved.</p>
