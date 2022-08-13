@@ -58,9 +58,9 @@
               <p class="">City:</p>
               <p class="text-[#8c8c8c]">Qom</p>
             </div>
-            <div class="item-specification mb-2 flex justify-between">
+            <div class="item-specification mb-2 flex justify-between" x-data="{ age: new Date().getFullYear() - 2001 }"> <!-- calculate age -->
               <p class="">Age:</p>
-              <p class="text-[#8c8c8c]">20</p>
+              <p class="text-[#8c8c8c]" x-text="age"></p>
             </div>
             <div class="item-specification mb-2 flex justify-between">
               <p class="">Email:</p>
